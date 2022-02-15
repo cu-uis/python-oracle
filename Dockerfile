@@ -4,7 +4,7 @@ RUN service cron start && service rsyslog start
 RUN pip3 install pandas && pip3 install pika && pip3 install cx_oracle
 
 RUN mkdir -p /scripts
-COPY mdmdev-connectionTest.py /scripts/mdmdev-connectionTest.py
+COPY ciwdev-connectionTest.py /scripts/ciwdev-connectionTest.py
 
 RUN mkdir -p /opt/oracle
 WORKDIR /opt/oracle
