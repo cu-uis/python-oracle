@@ -1,7 +1,7 @@
 #checking mdm
 import cx_Oracle
 
-dsn_tns = cx_Oracle.makedsn('drac-scan.dev.cu.edu', '6800', service_name='ciwdev') # if needed, place an 'r' before any parameter in order to address special characters such as '\'.
+dsn_tns = cx_Oracle.makedsn('server', 'port', service_name='name') # if needed, place an 'r' before any parameter in order to address special characters such as '\'.
 conn = cx_Oracle.connect(user=r'username', password='password', dsn=dsn_tns) # if needed, place an 'r' before any parameter in order to address special characters such as '\'. For example, if your user name contains '\', you'll need to place 'r' before the user name: user=r'User Name'
 
 c = conn.cursor()
@@ -14,8 +14,3 @@ for row in c:
 
 conn.close()
 
-#service name #icsprd OR #inetegrations user
-
-
-#user #etl_select# OR #
-#password
